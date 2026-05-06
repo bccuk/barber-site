@@ -2,47 +2,61 @@ export const site = {
   name: 'Fade & Trim Barbers',
   shortName: 'Fade & Trim',
   tagline: 'Sharp Cuts. Classic Service.',
-  location: 'Dartford',
-  established: 2014,
+  location: 'Stone, Dartford',
+  // Year shop opened — verify with owner; placeholder until confirmed.
+  established: 2018,
   description:
-    "Dartford's traditional barbershop — modern fades, classic cuts, and hot-towel shaves. Walk-ins welcome.",
+    "Stone, Dartford's neighbourhood barbershop — modern fades, classic cuts, beard work and hot-towel shaves. Walk-ins welcome, open seven days.",
   seo: {
-    title: 'Fade & Trim Barbers — Dartford | Modern Fades & Classic Cuts',
+    title: 'Fade & Trim Barbers — Stone, Dartford | Modern Fades & Classic Cuts',
     description:
-      "Traditional barbering in the heart of Dartford. Skin fades, scissor cuts, beard trims, and hot-towel shaves. Walk-ins welcome — open 6 days.",
+      "Traditional barbering on London Road, Stone. Skin fades, scissor cuts, beard trims, and hot-towel shaves. 4.7 stars from 47 reviews. Walk-ins welcome — open 7 days.",
+  },
+  rating: {
+    score: 4.7,
+    count: 47,
+    source: 'Google',
   },
   contact: {
-    phone: '01322 000 000',
-    phoneHref: 'tel:+441322000000',
+    phone: '07990 232186',
+    phoneHref: 'tel:+447990232186',
     email: 'hello@fadeandtrimbarbers.co.uk',
     address: {
-      line1: '12 High Street',
-      city: 'Dartford',
-      postcode: 'DA1 1AA',
+      line1: '60 London Road',
+      city: 'Stone, Dartford',
+      postcode: 'DA2 6AN',
       country: 'United Kingdom',
     },
-    instagram: '@fadeandtrim_dartford',
-    instagramUrl: 'https://instagram.com/fadeandtrim_dartford',
-    facebookUrl: 'https://facebook.com/fadeandtrimdartford',
+    instagram: '@fadeandtrimbarber',
+    instagramUrl: 'https://www.instagram.com/fadeandtrimbarber',
+    facebookUrl:
+      'https://www.facebook.com/people/FadeTrim-Barbers/100085845297297/',
     googleMapsEmbed:
-      'https://www.google.com/maps?q=Dartford+High+Street&output=embed',
-    googleMapsLink: 'https://maps.google.com/?q=Dartford+High+Street',
+      'https://www.google.com/maps?q=60+London+Road+Stone+Dartford+DA2+6AN&output=embed',
+    googleMapsLink:
+      'https://maps.google.com/?q=Fade+%26+Trim+Barbers+60+London+Road+Stone+Dartford+DA2+6AN',
   },
   hours: [
-    { day: 'Monday', hours: '09:00 – 18:30' },
-    { day: 'Tuesday', hours: '09:00 – 18:30' },
-    { day: 'Wednesday', hours: '09:00 – 18:30' },
-    { day: 'Thursday', hours: '09:00 – 19:30' },
-    { day: 'Friday', hours: '09:00 – 19:30' },
-    { day: 'Saturday', hours: '08:00 – 17:00' },
-    { day: 'Sunday', hours: 'Closed' },
+    { day: 'Monday', hours: '09:00 – 19:00' },
+    { day: 'Tuesday', hours: '09:00 – 19:00' },
+    { day: 'Wednesday', hours: '09:00 – 19:00' },
+    { day: 'Thursday', hours: '09:00 – 19:00' },
+    { day: 'Friday', hours: '09:00 – 19:00' },
+    { day: 'Saturday', hours: '08:00 – 18:00' },
+    { day: 'Sunday', hours: '10:00 – 16:00' },
   ],
   services: [
     {
       name: 'Signature Cut',
       price: 18,
-      description: 'Consultation, wash, scissor & clipper cut, finished with style.',
+      description: 'Consultation, scissor & clipper cut, finished sharp.',
       duration: '30 min',
+    },
+    {
+      name: 'Cut & Wash',
+      price: 22,
+      description: 'Signature cut with hair wash and styling.',
+      duration: '40 min',
     },
     {
       name: 'Skin Fade',
@@ -52,27 +66,27 @@ export const site = {
     },
     {
       name: 'Beard Trim & Shape',
-      price: 10,
+      price: 12,
       description: 'Razor lines, neat shape, beard oil finish.',
       duration: '15 min',
     },
     {
       name: 'Cut & Beard Combo',
-      price: 25,
+      price: 28,
       description: 'Full service. Best value — most popular.',
       duration: '45 min',
       featured: true,
     },
     {
       name: 'Hot Towel Shave',
-      price: 25,
-      description: 'Cut-throat shave with hot towels and balm.',
+      price: 18,
+      description: 'Cut-throat shave, hot towels, soothing balm.',
       duration: '40 min',
     },
     {
       name: 'Senior Cut (65+)',
       price: 14,
-      description: 'Mon to Wed only.',
+      description: 'Mon to Thu only.',
       duration: '30 min',
     },
     {
@@ -81,26 +95,45 @@ export const site = {
       description: 'Patient with first-cut nerves.',
       duration: '20 min',
     },
-    {
-      name: 'Father & Son',
-      price: 27,
-      description: 'Cut for one parent and one child.',
-      duration: '50 min',
-    },
   ],
   about: {
     eyebrow: 'About the shop',
-    heading: 'A proper barbershop. No frills, no fuss.',
+    heading: "A proper barbershop on London Road.",
     body: [
-      'Fade & Trim has been cutting hair on Dartford High Street since 2014. We do one thing — we cut hair properly, and we take our time over it.',
-      'Whether you want a sharp skin fade, a classic side-part, a beard tidy or a full hot-towel shave, you will sit in the chair, get a real consultation, and leave looking your best. No subscriptions, no upsells — just a good cut at a fair price.',
+      "Fade & Trim is Stone's neighbourhood barbershop — a small team led by Kardo, doing one thing properly: cutting hair the way you want it cut.",
+      "Whether it's a sharp skin fade, a classic side-part, a beard tidy or a full hot-towel shave, you'll get a real consultation, a fresh towel, and a finish you can be proud of. No rush, no upsells — just a good cut at a fair price, seven days a week.",
     ],
     bullets: [
-      'Walk-ins welcome — bookings recommended for Saturdays',
-      'Cash or card, contactless on every chair',
-      'Tea, coffee and a chat — on the house',
+      'Walk-ins welcome — call ahead on Saturdays',
+      'Open 7 days, including Sundays 10 – 4',
+      'Cash or card on every chair',
     ],
   },
+  testimonials: [
+    {
+      quote:
+        'From the moment I walked in, the team was welcoming, professional, and attentive to detail.',
+      author: 'Google review',
+    },
+    {
+      quote:
+        "The quality of the haircut exceeded my expectations — it's clear the staff take great pride in their work.",
+      author: 'Google review',
+    },
+    {
+      quote:
+        'Not only is the service excellent, but the pricing is also very reasonable for the level of care and expertise.',
+      author: 'Google review',
+    },
+    {
+      quote: 'Kardo was an excellent barber. Highly recommend this place.',
+      author: 'Google review',
+    },
+    {
+      quote: 'Best friendly place and professional barbers.',
+      author: 'Google review',
+    },
+  ],
   gallery: [
     { label: 'Skin Fade', tone: 'from-neutral-800 to-neutral-950' },
     { label: 'Scissor Cut', tone: 'from-stone-800 to-stone-950' },
