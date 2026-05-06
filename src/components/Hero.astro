@@ -1,0 +1,68 @@
+---
+import { site } from '../data/site';
+---
+
+<section
+  id="top"
+  class="relative min-h-[100svh] bg-ink text-cream overflow-hidden grain flex items-center"
+>
+  <!-- Decorative vertical lines (barber-pole inspired, super subtle) -->
+  <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+    <div class="h-full w-full" style="background-image: repeating-linear-gradient(90deg, transparent 0 80px, rgba(164,113,72,0.6) 80px 81px);"></div>
+  </div>
+
+  <!-- Brass radial glow top-right -->
+  <div
+    class="absolute -top-40 -right-40 w-[36rem] h-[36rem] rounded-full pointer-events-none"
+    style="background: radial-gradient(closest-side, rgba(164,113,72,0.18), transparent 70%);"
+  >
+  </div>
+
+  <div class="container-page relative z-10 pt-28 pb-20 md:pt-32 md:pb-28">
+    <p class="eyebrow">
+      Est. {site.established} · {site.location}, Kent
+    </p>
+
+    <h1 class="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
+      Sharp cuts.<br />
+      <span class="text-brass-light italic">Classic</span> service.
+    </h1>
+
+    <p class="mt-8 max-w-xl text-lg md:text-xl text-cream/70 leading-relaxed">
+      Modern fades, scissor cuts, and hot-towel shaves — done properly,
+      on Dartford High Street since {site.established}.
+    </p>
+
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a href={site.contact.phoneHref} class="btn-primary">
+        Book Your Cut
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#services" class="btn-outline text-cream">
+        View Services
+      </a>
+    </div>
+
+    <!-- Stat strip -->
+    <div class="mt-16 md:mt-24 grid grid-cols-3 gap-6 md:gap-12 max-w-2xl border-t border-cream/10 pt-8">
+      <div>
+        <p class="font-display text-3xl md:text-4xl text-brass-light">10+</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">Years on the High Street</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl md:text-4xl text-brass-light">6</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">Days a week</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl md:text-4xl text-brass-light">£18+</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">From, signature cut</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-cream/40">
+    <span class="text-[0.65rem] uppercase tracking-[0.22em]">Scroll</span>
+    <span class="block w-px h-8 bg-cream/30"></span>
+  </div>
+</section>

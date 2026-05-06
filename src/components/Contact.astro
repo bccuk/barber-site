@@ -1,0 +1,61 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="book" class="section-pad bg-cream-dark">
+  <div class="container-page">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="eyebrow">Ready when you are</p>
+      <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+        Book your chair.
+      </h2>
+      <p class="mt-6 text-lg text-muted leading-relaxed">
+        Call the shop, message us on Instagram, or just walk in. Whichever's easiest.
+      </p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+      <a
+        href={site.contact.phoneHref}
+        class="group flex flex-col items-center text-center bg-cream rounded-sm p-8 border border-ink/5 hover:border-brass transition-colors"
+      >
+        <span class="w-12 h-12 grid place-items-center rounded-full bg-ink text-cream group-hover:bg-brass transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M2 5.88 5.88 2a1 1 0 0 1 1.41 0l2.83 2.83a1 1 0 0 1 0 1.41L8.12 7.25a13.05 13.05 0 0 0 8.63 8.63l1-2a1 1 0 0 1 1.41 0l2.83 2.83a1 1 0 0 1 0 1.41L18.12 22a1 1 0 0 1-1.06.23A19.93 19.93 0 0 1 2 6.94 1 1 0 0 1 2 5.88z"/></svg>
+        </span>
+        <p class="mt-5 text-xs uppercase tracking-[0.22em] text-muted">Call</p>
+        <p class="mt-1 font-display text-xl text-ink">{site.contact.phone}</p>
+      </a>
+
+      <a
+        href={site.contact.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex flex-col items-center text-center bg-cream rounded-sm p-8 border border-ink/5 hover:border-brass transition-colors"
+      >
+        <span class="w-12 h-12 grid place-items-center rounded-full bg-ink text-cream group-hover:bg-brass transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.8 2.2 12 2.2zm0 4.86a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88zm0 8.14a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm6.3-8.34a1.15 1.15 0 1 0-2.3 0 1.15 1.15 0 0 0 2.3 0z"/></svg>
+        </span>
+        <p class="mt-5 text-xs uppercase tracking-[0.22em] text-muted">DM us</p>
+        <p class="mt-1 font-display text-xl text-ink">Instagram</p>
+      </a>
+
+      <a
+        href="#visit"
+        class="group flex flex-col items-center text-center bg-cream rounded-sm p-8 border border-ink/5 hover:border-brass transition-colors"
+      >
+        <span class="w-12 h-12 grid place-items-center rounded-full bg-ink text-cream group-hover:bg-brass transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        </span>
+        <p class="mt-5 text-xs uppercase tracking-[0.22em] text-muted">Walk in</p>
+        <p class="mt-1 font-display text-xl text-ink">High Street</p>
+      </a>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href={site.contact.phoneHref} class="btn-primary">
+        Book Your Cut Now
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>

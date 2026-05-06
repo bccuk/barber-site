@@ -1,0 +1,66 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="gallery" class="section-pad bg-cream-dark">
+  <div class="container-page">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="eyebrow">From the chair</p>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+          Recent cuts.
+        </h2>
+      </div>
+      <a
+        href={site.contact.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-sm font-medium text-brass hover:text-brass-dark transition-colors"
+      >
+        See more on Instagram
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+      {
+        site.gallery.map((item, i) => (
+          <div
+            class:list={[
+              'group relative aspect-square overflow-hidden rounded-sm bg-gradient-to-br grain text-cream',
+              item.tone,
+              i === 0 && 'md:col-span-2 md:row-span-2 md:aspect-auto',
+            ]}
+          >
+            <!-- decorative scissor / razor SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              class="absolute inset-0 w-full h-full opacity-[0.06] group-hover:opacity-[0.12] transition-opacity"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="0.5"
+            >
+              <circle cx="50" cy="50" r="30" />
+              <circle cx="50" cy="50" r="20" />
+              <line x1="20" y1="50" x2="80" y2="50" />
+            </svg>
+
+            <div class="absolute inset-0 p-5 flex flex-col justify-end">
+              <p class="text-[0.65rem] uppercase tracking-[0.22em] text-cream/60">
+                Photo placeholder
+              </p>
+              <p class="mt-1 font-display text-xl md:text-2xl">
+                {item.label}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="mt-8 text-sm text-muted text-center md:text-left">
+      Real shop photos coming soon — drop in to see the full gallery.
+    </p>
+  </div>
+</section>

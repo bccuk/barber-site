@@ -1,0 +1,55 @@
+---
+import { site } from '../data/site';
+
+const links = [
+  { label: 'Services', href: '#services' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'About', href: '#about' },
+  { label: 'Visit', href: '#visit' },
+];
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 backdrop-blur-md bg-cream/80 border-b border-ink/5"
+>
+  <div class="container-page flex items-center justify-between h-16 md:h-20">
+    <a href="#top" class="flex items-baseline gap-2 group">
+      <span
+        class="font-display text-xl md:text-2xl font-semibold tracking-tight text-ink"
+      >
+        Fade<span class="text-brass">&amp;</span>Trim
+      </span>
+      <span class="hidden sm:inline text-[0.65rem] uppercase tracking-[0.22em] text-muted">
+        Dartford
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm font-medium text-ink/80 hover:text-brass transition-colors"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a href={site.contact.phoneHref} class="btn-primary !py-2 !px-5 text-sm">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-4 h-4"
+      >
+        <path
+          d="M2.003 5.884 5.882 2.005a1 1 0 0 1 1.414 0l2.828 2.829a1 1 0 0 1 0 1.414L8.124 7.249a13.05 13.05 0 0 0 8.627 8.627l1.001-2.001a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414l-3.879 3.879a1 1 0 0 1-1.06.226A19.928 19.928 0 0 1 2 6.944a1 1 0 0 1 .003-1.06z"
+        />
+      </svg>
+      <span class="hidden sm:inline">Book Now</span>
+      <span class="sm:hidden">Call</span>
+    </a>
+  </div>
+</header>

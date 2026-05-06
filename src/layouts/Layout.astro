@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title ?? site.seo.title;
+const pageDescription = description ?? site.seo.description;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Theme color matches the cream background -->
+    <meta name="theme-color" content="#faf7f2" />
+
+    <!-- Fonts: Playfair Display (display serif) + Inter (UI sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LocalBusiness JSON-LD for SEO -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BarberShop',
+        name: site.name,
+        description: site.description,
+        url: Astro.site?.toString(),
+        telephone: site.contact.phone,
+        email: site.contact.email,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: site.contact.address.line1,
+          addressLocality: site.contact.address.city,
+          postalCode: site.contact.address.postcode,
+          addressCountry: 'GB',
+        },
+        priceRange: '££',
+        openingHoursSpecification: site.hours
+          .filter((h) => h.hours !== 'Closed')
+          .map((h) => ({
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: h.day,
+            opens: h.hours.split(' – ')[0],
+            closes: h.hours.split(' – ')[1],
+          })),
+      })}
+    />
+  </head>
+  <body class="min-h-screen bg-cream text-ink antialiased">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

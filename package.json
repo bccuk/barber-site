@@ -1,0 +1,29 @@
+{
+  "name": "fade-trim-barbers",
+  "version": "0.1.0",
+  "description": "Fade & Trim Barbers, Dartford — official website",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bccuk/barber-site.git"
+  },
+  "author": "Bytecode Consulting Ltd",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bccuk/barber-site/issues"
+  },
+  "homepage": "https://github.com/bccuk/barber-site#readme",
+  "private": true,
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^5.18.1",
+    "tailwindcss": "^4.2.4"
+  }
+}
