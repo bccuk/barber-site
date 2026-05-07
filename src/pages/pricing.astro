@@ -1,0 +1,527 @@
+---
+import '../styles/global.css';
+import { pricing } from '../data/pricing';
+
+const base = import.meta.env.BASE_URL;
+const asset = (p: string) => `${base}/${p}`.replace(/\/+/g, '/');
+
+const pageTitle = 'Pricing — Bytecode Consulting | Smart websites for small businesses';
+const pageDescription =
+  "Premium small-business websites, built to order in 48 hours. Founder pricing from £99 + £19/month. Built in Dartford by Bytecode Consulting.";
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href={asset('favicon.svg')} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="theme-color" content="#141414" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="min-h-screen bg-cream text-ink antialiased">
+    <!-- ========== NAV ========== -->
+    <header class="fixed inset-x-0 top-0 z-50 backdrop-blur-md bg-cream/85 border-b border-ink/5">
+      <div class="container-page flex items-center justify-between h-16 md:h-20">
+        <a href="/pricing" class="flex items-baseline gap-2">
+          <span class="font-display text-xl md:text-2xl font-semibold tracking-tight text-ink">
+            Bytecode<span class="text-brass">.</span>
+          </span>
+          <span class="hidden sm:inline text-[0.65rem] uppercase tracking-[0.22em] text-muted">
+            {pricing.brand.tagline}
+          </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#what-you-get" class="text-sm font-medium text-ink/80 hover:text-brass transition-colors">What you get</a>
+          <a href="#pricing" class="text-sm font-medium text-ink/80 hover:text-brass transition-colors">Pricing</a>
+          <a href="#faq" class="text-sm font-medium text-ink/80 hover:text-brass transition-colors">FAQ</a>
+        </nav>
+
+        <a href="#apply" class="btn-primary !py-2 !px-5 text-sm">Get started</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <section class="relative bg-ink text-cream overflow-hidden grain pt-32 md:pt-40 pb-20 md:pb-28">
+        <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+          <div class="h-full w-full" style="background-image: repeating-linear-gradient(90deg, transparent 0 80px, rgba(164,113,72,0.6) 80px 81px);"></div>
+        </div>
+        <div class="absolute -top-40 -right-40 w-[36rem] h-[36rem] rounded-full pointer-events-none"
+          style="background: radial-gradient(closest-side, rgba(164,113,72,0.18), transparent 70%);"></div>
+
+        <div class="container-page relative z-10">
+          <p class="eyebrow">{pricing.hero.eyebrow}</p>
+          <h1 class="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
+            A proper website<br/>
+            for your business —<br/>
+            <span class="text-brass-light italic">without the agency price tag.</span>
+          </h1>
+
+          <p class="mt-8 max-w-2xl text-lg md:text-xl text-cream/70 leading-relaxed">
+            {pricing.hero.sub}
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#apply" class="btn-primary">
+              {pricing.hero.primaryCta}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href={pricing.hero.secondaryCtaHref} target="_blank" rel="noopener" class="btn-outline text-cream">
+              {pricing.hero.secondaryCta}
+            </a>
+          </div>
+
+          <!-- Headline price -->
+          <div class="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-3xl border-t border-cream/10 pt-8">
+            <div>
+              <p class="font-display text-3xl md:text-4xl text-brass-light">£{pricing.hero.priceFrom.setup}</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">Setup, founder price</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl md:text-4xl text-brass-light">£{pricing.hero.priceFrom.monthly}<span class="text-base text-cream/40">/mo</span></p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">Hosting + updates</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl md:text-4xl text-brass-light">48h</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">From order to draft</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl md:text-4xl text-brass-light">0</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/50">Long contracts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== TRUST / LOCAL ========== -->
+      <section class="bg-cream-dark border-y border-ink/5">
+        <div class="container-page py-10 md:py-12 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-10 h-10 grid place-items-center rounded-full bg-ink text-brass-light">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            </span>
+            <div>
+              <p class="text-[0.65rem] uppercase tracking-[0.22em] text-brass">Based in {pricing.trust.location}</p>
+              <p class="font-display text-lg text-ink">A new local AI &amp; software studio.</p>
+            </div>
+          </div>
+          <p class="text-base text-muted leading-relaxed md:border-l md:border-ink/10 md:pl-6">
+            {pricing.trust.line}
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== WHO IT'S FOR ========== -->
+      <section class="section-pad bg-cream">
+        <div class="container-page">
+          <div class="text-center max-w-2xl mx-auto">
+            <p class="eyebrow">Who it's for</p>
+            <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+              Local businesses who deserve a proper online presence.
+            </h2>
+            <p class="mt-6 text-lg text-muted leading-relaxed">
+              If you run a small service business in or around Kent, this is built for you.
+            </p>
+          </div>
+
+          <ul class="mt-14 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4">
+            {pricing.audiences.map((a) => (
+              <li class="aspect-square flex flex-col items-center justify-center gap-3 bg-cream-dark rounded-sm border border-ink/5 p-3 hover:border-brass transition-colors">
+                <span class="w-9 h-9 grid place-items-center text-brass">
+                  {a.icon === 'scissors' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>)}
+                  {a.icon === 'tool' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>)}
+                  {a.icon === 'plug' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M9 2v6"/><path d="M15 2v6"/><path d="M7 8h10v2a5 5 0 0 1-5 5 5 5 0 0 1-5-5z"/><path d="M12 15v7"/></svg>)}
+                  {a.icon === 'sparkle' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M12 3l1.9 5.5L19 10l-5.1 1.5L12 17l-1.9-5.5L5 10l5.1-1.5z"/><path d="M19 17l.6 1.7L21 19l-1.4.3L19 21l-.6-1.7L17 19l1.4-.3z"/></svg>)}
+                  {a.icon === 'cup' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M3 8h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M17 9h2a3 3 0 0 1 0 6h-2"/><path d="M7 4v2"/><path d="M11 3v3"/></svg>)}
+                  {a.icon === 'dumbbell' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M2 12h2"/><path d="M20 12h2"/><rect x="4" y="8" width="3" height="8" rx="1"/><rect x="17" y="8" width="3" height="8" rx="1"/><rect x="7" y="10" width="10" height="4" rx="1"/></svg>)}
+                  {a.icon === 'spray' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M3 2h6v4H3z"/><path d="M9 4h3l3 3v3H6V7l3-3z"/><rect x="6" y="10" width="9" height="12" rx="1"/><circle cx="18" cy="3" r="1"/><circle cx="22" cy="6" r="1"/><circle cx="19" cy="8" r="1"/></svg>)}
+                  {a.icon === 'wrench' && (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>)}
+                </span>
+                <span class="text-sm font-medium text-ink text-center">{a.label}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="mt-8 text-center text-sm text-muted">
+            Other small business? Drop us a line — chances are we can help.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== WHAT YOU GET ========== -->
+      <section id="what-you-get" class="section-pad bg-cream-dark">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-end">
+            <div class="md:col-span-5">
+              <p class="eyebrow">What you get</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+                Everything in,<br/>nothing nickel-and-dimed.
+              </h2>
+            </div>
+            <div class="md:col-span-7">
+              <p class="text-lg text-muted leading-relaxed max-w-xl">
+                One price covers the design, the build, the hosting, the domain, and the ongoing support. No surprise bills.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-14 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {pricing.benefits.map((b) => (
+              <div class="bg-cream rounded-sm p-7 md:p-8 border border-ink/5 hover:border-brass transition-colors">
+                <span class="w-10 h-10 grid place-items-center rounded-full bg-ink text-brass-light">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <h3 class="mt-5 font-display text-xl md:text-2xl text-ink">{b.title}</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed">{b.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== LIVE EXAMPLE ========== -->
+      <section class="section-pad bg-ink text-cream grain">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+            <div class="md:col-span-6">
+              <p class="eyebrow">Live example</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+                See exactly what you'd get.
+              </h2>
+              <p class="mt-6 text-lg text-cream/70 leading-relaxed max-w-xl">
+                We built this for <strong class="text-cream">Fade &amp; Trim Barbers</strong> in Stone, Dartford —
+                4.7 stars, 47 reviews, real photos, real reviews, real address. Yours will be just as
+                considered, in your own brand.
+              </p>
+              <div class="mt-8">
+                <a href="https://barbers.bytecodeconsulting.com/" target="_blank" rel="noopener" class="btn-primary">
+                  Open the live demo
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="md:col-span-6">
+              <div class="relative aspect-[4/5] md:aspect-[5/6] overflow-hidden rounded-sm border border-cream/10 shadow-2xl shadow-black/40">
+                <img
+                  src={asset('images/0.webp')}
+                  alt="Fade & Trim Barbers — live example built by Bytecode Consulting"
+                  loading="lazy"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div class="absolute bottom-0 inset-x-0 p-5 md:p-7 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                  <p class="text-[0.65rem] uppercase tracking-[0.22em] text-brass-light">Built for</p>
+                  <p class="mt-1 font-display text-2xl">Fade &amp; Trim Barbers</p>
+                  <p class="text-sm text-cream/70">Stone, Dartford · barbers.bytecodeconsulting.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PRICING ========== -->
+      <section id="pricing" class="section-pad bg-cream">
+        <div class="container-page">
+          <div class="text-center max-w-2xl mx-auto">
+            <p class="eyebrow">Pricing</p>
+            <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+              One simple plan.<br/>Founder pricing for the early adopters.
+            </h2>
+            <p class="mt-6 text-lg text-muted leading-relaxed">
+              Pay monthly or save by paying yearly. Cancel whenever you want.
+            </p>
+          </div>
+
+          <div class="mt-14 md:mt-20 grid md:grid-cols-2 gap-5 md:gap-7 max-w-5xl mx-auto">
+            <!-- Founder -->
+            <div class="relative bg-ink text-cream rounded-sm p-8 md:p-10 grain border-2 border-brass">
+              <span class="absolute -top-3 left-8 text-[0.65rem] uppercase tracking-[0.22em] font-semibold bg-brass text-cream px-3 py-1 rounded-full">
+                Founder · first 5 customers
+              </span>
+              <h3 class="mt-2 font-display text-3xl md:text-4xl">Locked-in price</h3>
+              <p class="mt-2 text-sm text-cream/60">
+                The first five customers get this price forever, even after we raise our standard rates.
+              </p>
+
+              <div class="mt-8 flex items-baseline gap-1">
+                <span class="text-2xl text-cream/60">£</span>
+                <span class="font-display text-6xl md:text-7xl text-brass-light tabular-nums">{pricing.plans.founder.setup}</span>
+                <span class="text-base text-cream/60 ml-2">setup</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-1">
+                <span class="text-base text-cream/60">then</span>
+                <span class="text-lg text-cream/60">£</span>
+                <span class="font-display text-3xl text-cream tabular-nums ml-1">{pricing.plans.founder.monthly}</span>
+                <span class="text-sm text-cream/60">/month</span>
+                <span class="text-sm text-cream/40 ml-2">or £{pricing.plans.founder.annual}/year (save £{pricing.plans.founder.annualSaving})</span>
+              </div>
+
+              <a href="#apply" class="btn-primary w-full mt-8 justify-center">
+                Claim founder pricing
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+
+            <!-- Standard -->
+            <div class="bg-cream-dark rounded-sm p-8 md:p-10 border border-ink/10">
+              <span class="text-[0.65rem] uppercase tracking-[0.22em] font-semibold text-muted">
+                Standard · after the first five
+              </span>
+              <h3 class="mt-2 font-display text-3xl md:text-4xl text-ink">Standard rate</h3>
+              <p class="mt-2 text-sm text-muted">
+                What everyone else pays. Same product, same support — just less of a deal.
+              </p>
+
+              <div class="mt-8 flex items-baseline gap-1">
+                <span class="text-2xl text-muted">£</span>
+                <span class="font-display text-6xl md:text-7xl text-ink tabular-nums">{pricing.plans.standard.setup}</span>
+                <span class="text-base text-muted ml-2">setup</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-1">
+                <span class="text-base text-muted">then</span>
+                <span class="text-lg text-muted">£</span>
+                <span class="font-display text-3xl text-ink tabular-nums ml-1">{pricing.plans.standard.monthly}</span>
+                <span class="text-sm text-muted">/month</span>
+                <span class="text-sm text-muted/60 ml-2">or £{pricing.plans.standard.annual}/year (save £{pricing.plans.standard.annualSaving})</span>
+              </div>
+
+              <p class="mt-8 text-sm text-muted">
+                Don't want to wait? <a href="#apply" class="text-brass hover:text-brass-dark underline-offset-2 hover:underline">Apply now</a> — first five spots fill quickly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Included / Not included -->
+          <div class="mt-14 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+            <div>
+              <p class="text-xs uppercase tracking-[0.22em] text-brass mb-4">Included in every plan</p>
+              <ul class="space-y-2.5">
+                {pricing.included.map((item) => (
+                  <li class="flex items-start gap-3 text-ink">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brass mt-1 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span class="text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.22em] text-muted mb-4">Not included (yet)</p>
+              <ul class="space-y-2.5">
+                {pricing.notIncluded.map((item) => (
+                  <li class="flex items-start gap-3 text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mt-1 shrink-0 text-muted/60"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    <span class="text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ADD-ONS ========== -->
+      <section class="section-pad bg-cream-dark">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 items-end">
+            <div class="md:col-span-7">
+              <p class="eyebrow">Optional extras</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+                Pick and choose<br/>what you actually need.
+              </h2>
+            </div>
+            <div class="md:col-span-5">
+              <p class="text-base text-muted leading-relaxed">
+                One-off add-ons. Add them at sign-up, or any time later when you're ready.
+              </p>
+            </div>
+          </div>
+
+          <ul class="mt-14 grid md:grid-cols-2 gap-3">
+            {pricing.addOns.map((a) => (
+              <li class="flex items-start gap-5 bg-cream rounded-sm p-6 border border-ink/5 hover:border-brass transition-colors">
+                <div class="flex-1">
+                  <p class="font-display text-xl text-ink">{a.name}</p>
+                  <p class="mt-1.5 text-sm text-muted leading-relaxed">{a.blurb}</p>
+                </div>
+                <div class="text-right shrink-0">
+                  <p class="font-display text-2xl text-ink tabular-nums">£{a.price}</p>
+                  <p class="text-xs uppercase tracking-[0.18em] text-muted mt-1">{a.unit}</p>
+                  {a.monthly && (
+                    <p class="text-xs text-muted mt-1">+ £{a.monthly}/mo</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== HOW IT WORKS ========== -->
+      <section class="section-pad bg-ink text-cream grain">
+        <div class="container-page">
+          <div class="text-center max-w-2xl mx-auto">
+            <p class="eyebrow">How it works</p>
+            <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+              Three steps. 48 hours.
+            </h2>
+          </div>
+
+          <ol class="mt-14 md:mt-20 grid md:grid-cols-3 gap-5 md:gap-8">
+            {pricing.steps.map((s) => (
+              <li class="bg-cream/[0.04] border border-cream/10 rounded-sm p-7 md:p-9">
+                <p class="font-display text-5xl md:text-6xl text-brass-light leading-none">{s.n}</p>
+                <h3 class="mt-6 font-display text-2xl">{s.title}</h3>
+                <p class="mt-3 text-sm text-cream/70 leading-relaxed">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <!-- ========== FAQ ========== -->
+      <section id="faq" class="section-pad bg-cream">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 md:gap-16">
+            <div class="md:col-span-4">
+              <p class="eyebrow">FAQ</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+                Questions, answered.
+              </h2>
+              <p class="mt-6 text-base text-muted leading-relaxed">
+                Anything not covered? Email <a href={`mailto:${pricing.brand.email}`} class="text-brass hover:text-brass-dark underline-offset-2 hover:underline">{pricing.brand.email}</a>.
+              </p>
+            </div>
+
+            <div class="md:col-span-8">
+              <ul class="divide-y divide-ink/10 border-y border-ink/10">
+                {pricing.faqs.map((f) => (
+                  <li>
+                    <details class="group py-6">
+                      <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+                        <h3 class="font-display text-xl md:text-2xl text-ink leading-tight">{f.q}</h3>
+                        <span class="w-8 h-8 grid place-items-center rounded-full bg-cream-dark text-ink shrink-0 transition-transform group-open:rotate-45">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                      </summary>
+                      <p class="mt-4 text-base text-muted leading-relaxed pr-14">{f.a}</p>
+                    </details>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== APPLY / FORM ========== -->
+      <section id="apply" class="section-pad bg-ink text-cream grain">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 md:gap-16 max-w-5xl mx-auto">
+            <div class="md:col-span-5">
+              <p class="eyebrow">Get started</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+                {pricing.form.title}
+              </h2>
+              <p class="mt-6 text-base text-cream/70 leading-relaxed">
+                {pricing.form.sub}
+              </p>
+              <p class="mt-6 text-xs uppercase tracking-[0.22em] text-brass-light">
+                Or email
+              </p>
+              <a href={`mailto:${pricing.form.fallbackEmail}`} class="text-base text-cream hover:text-brass-light transition-colors">
+                {pricing.form.fallbackEmail}
+              </a>
+            </div>
+
+            <form
+              class="md:col-span-7 bg-cream/[0.04] border border-cream/10 rounded-sm p-7 md:p-9 space-y-5"
+              action={pricing.form.actionUrl}
+              method="POST"
+            >
+              <div class="grid sm:grid-cols-2 gap-5">
+                <label class="block">
+                  <span class="text-xs uppercase tracking-[0.18em] text-cream/60">Business name</span>
+                  <input type="text" name="business_name" required class="mt-2 w-full bg-transparent border-b border-cream/20 focus:border-brass-light outline-none py-2 text-cream placeholder:text-cream/30" placeholder="e.g. Fade & Trim" />
+                </label>
+                <label class="block">
+                  <span class="text-xs uppercase tracking-[0.18em] text-cream/60">Business type</span>
+                  <select name="business_type" required class="mt-2 w-full bg-ink border-b border-cream/20 focus:border-brass-light outline-none py-2 text-cream">
+                    <option value="" class="bg-ink">Pick one…</option>
+                    {pricing.form.businessTypes.map((t) => (
+                      <option value={t} class="bg-ink">{t}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <label class="block">
+                  <span class="text-xs uppercase tracking-[0.18em] text-cream/60">Your name</span>
+                  <input type="text" name="name" required class="mt-2 w-full bg-transparent border-b border-cream/20 focus:border-brass-light outline-none py-2 text-cream placeholder:text-cream/30" placeholder="First and last" />
+                </label>
+                <label class="block">
+                  <span class="text-xs uppercase tracking-[0.18em] text-cream/60">Phone</span>
+                  <input type="tel" name="phone" required class="mt-2 w-full bg-transparent border-b border-cream/20 focus:border-brass-light outline-none py-2 text-cream placeholder:text-cream/30" placeholder="07…" />
+                </label>
+              </div>
+
+              <label class="block">
+                <span class="text-xs uppercase tracking-[0.18em] text-cream/60">Email</span>
+                <input type="email" name="email" required class="mt-2 w-full bg-transparent border-b border-cream/20 focus:border-brass-light outline-none py-2 text-cream placeholder:text-cream/30" placeholder="you@yourbusiness.co.uk" />
+              </label>
+
+              <label class="block">
+                <span class="text-xs uppercase tracking-[0.18em] text-cream/60">Tell us about your business</span>
+                <textarea name="message" rows="4" class="mt-2 w-full bg-transparent border-b border-cream/20 focus:border-brass-light outline-none py-2 text-cream placeholder:text-cream/30 resize-none" placeholder="A few lines is fine — what you do, where, what you'd want from a website."></textarea>
+              </label>
+
+              <!-- Honeypot for spam (hidden from real users) -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <button type="submit" class="btn-primary w-full justify-center mt-2">
+                Send my details
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+
+              <p class="text-xs text-cream/40 text-center">
+                We'll reply within one working day. No spam, no follow-up if you're not ready.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-cream-dark border-t border-ink/5">
+      <div class="container-page py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <p class="text-sm text-muted">
+          © {new Date().getFullYear()} {pricing.brand.name}. Built in Dartford.
+        </p>
+        <div class="flex items-center gap-5 text-sm text-muted">
+          <a href="https://barbers.bytecodeconsulting.com/" target="_blank" rel="noopener" class="hover:text-brass transition-colors">Live example</a>
+          <a href={`mailto:${pricing.brand.email}`} class="hover:text-brass transition-colors">{pricing.brand.email}</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
