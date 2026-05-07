@@ -103,6 +103,55 @@ export const pricing = {
     },
   },
 
+  // Itemised "what's in the £99 setup" — categorised for the breakdown table
+  setupBreakdown: [
+    {
+      category: 'Design & build',
+      items: [
+        { name: 'Custom design from your brand', detail: 'Your colours, logo, fonts and tone — not a Wix template.' },
+        { name: 'Up to 6 sections', detail: 'Hero · services & prices · gallery · about · hours · contact.' },
+        { name: 'Mobile, tablet & desktop', detail: 'Looks sharp on every screen size — phones first.' },
+        { name: 'Photo gallery (up to 10 photos)', detail: "We help you stage and optimise the photos you've got." },
+        { name: 'Polished motion & typography', detail: 'Premium feel — Playfair + Inter, considered animations.' },
+      ],
+    },
+    {
+      category: 'Domain & hosting',
+      items: [
+        { name: 'Custom domain registration', detail: 'yourbusiness.co.uk (or similar) — bought and configured for you.' },
+        { name: 'Cloudflare-grade hosting', detail: 'Fast everywhere, no monthly server bill, never goes down.' },
+        { name: 'HTTPS / SSL certificate', detail: 'Encrypted, auto-renewing — Google penalises sites without it.' },
+        { name: 'DNS configuration', detail: 'CNAMEs, MX, all the bits — handled.' },
+      ],
+    },
+    {
+      category: 'Get found on Google',
+      items: [
+        { name: 'LocalBusiness schema', detail: 'Rich results — your stars and hours show in Google search.' },
+        { name: 'Meta tags & Open Graph', detail: 'Your link looks polished when shared on WhatsApp / Facebook.' },
+        { name: 'Sitemap & robots.txt', detail: 'Search engines index every page properly.' },
+        { name: 'Analytics dashboard', detail: 'Plausible-style — see who visits, when, from where. No cookie banners.' },
+      ],
+    },
+    {
+      category: 'Modern & legal',
+      items: [
+        { name: 'PWA — installable as an app', detail: 'Customers can add your site to their phone home screen.' },
+        { name: 'Performance optimisation', detail: 'Lighthouse 95+ scores. Loads in under a second on 4G.' },
+        { name: 'Privacy & T&Cs pages', detail: 'GDPR-friendly boilerplate, written for your business.' },
+        { name: 'Accessibility basics', detail: 'Alt text, semantic HTML, contrast — works for everyone.' },
+      ],
+    },
+  ],
+
+  monthlyBreakdown: [
+    'Hosting, SSL & domain renewals (everything stays online)',
+    'Content updates whenever you ask — usually within an hour',
+    'Real human support, in Dartford',
+    'Backups, monitoring & framework upgrades',
+    'No surprise bills, no contracts',
+  ],
+
   included: [
     'Single-page website with up to 6 sections',
     'Mobile-first responsive design',
@@ -114,6 +163,81 @@ export const pricing = {
     'Content updates within reason (a few per month)',
     'Real human support — message or meet in person',
   ],
+
+  // "Why a website?" — direct comparison with relying on Instagram alone
+  whyWebsite: {
+    eyebrow: 'Why a website',
+    heading: "Instagram is brilliant. It's just not your website.",
+    intro: "Instagram works — for people who already follow you. A website is what every other potential customer expects to find.",
+    rows: [
+      {
+        gap: "Doesn't show up on Google",
+        instagram: 'Instagram pages rarely rank for "barber near me" or "electrician Dartford".',
+        website: "You're the first thing people see when they search for your trade in your area.",
+      },
+      {
+        gap: "Customers need an account",
+        instagram: 'Half your potential customers — older locals, busy families — don\'t use Instagram daily.',
+        website: 'Anyone with a phone and a browser. No login, no app required.',
+      },
+      {
+        gap: 'Limited info display',
+        instagram: 'Hours, prices, services and location are buried in posts and bios.',
+        website: 'Everything visible in one scroll. Hours, prices, photos, reviews, location, contact.',
+      },
+      {
+        gap: "You don't own it",
+        instagram: 'Algorithm changes, account bans, platform shutdowns — Meta calls the shots.',
+        website: 'Yours forever. Your domain, your content, your audience.',
+      },
+      {
+        gap: "Doesn't build search authority",
+        instagram: "Reviews on Instagram don't help your Google rankings.",
+        website: 'Reviews schema, local SEO, structured data — Google rewards proper websites.',
+      },
+    ],
+    closer: "Best move: keep posting on Instagram. Add a website. The two feed each other — your website is the front door, Instagram is the day-to-day shop window.",
+  },
+
+  // Bytecode Consulting showcase — what we do beyond small business websites
+  bytecode: {
+    eyebrow: 'About the studio',
+    heading: 'More than websites.',
+    intro: "Bytecode Consulting is a Dartford-based AI & software studio. Small-business websites are one of several things we ship — alongside our own AI products and platforms for grassroots sports clubs.",
+    portfolio: [
+      {
+        name: 'GabbleAI',
+        logo: 'images/portfolio/gabbleai-logo.webp',
+        href: 'https://bytecodeconsulting.com/products/gabbleai',
+        tag: 'Our product · launched April 2026',
+        body: 'AI-powered GCSE speaking practice for French, Spanish, German and Chinese — instant feedback and progress tracking for students.',
+      },
+      {
+        name: 'ClubOS',
+        logo: 'images/portfolio/clubos-logo-dark.svg',
+        href: 'https://bytecodeconsulting.com/products/clubos',
+        tag: 'Our product · launching June 2026',
+        body: 'Multi-sport, multi-tenant operating platform for grassroots clubs — fixtures, members, payments, comms, all in one place.',
+      },
+      {
+        name: 'GNG Cricket Club',
+        logo: 'images/portfolio/gng-logo.webp',
+        href: 'https://gngcc.uk',
+        tag: 'Client · website + 2026 season sponsor',
+        body: "We built their website and back them as 2026 season sponsor. Grassroots cricket is close to our hearts.",
+      },
+    ],
+    services: [
+      'AI Automation Sprints (workflow audit → secure handover)',
+      'Cloud Product Sprints (serverless MVPs)',
+      'Website Lead Engine Sprints (this — for small businesses)',
+      'AI & Cloud consulting, software delivery, training',
+    ],
+    cta: {
+      label: 'Visit bytecodeconsulting.com',
+      href: 'https://bytecodeconsulting.com',
+    },
+  },
 
   notIncluded: [
     'E-commerce / online ordering (different product)',

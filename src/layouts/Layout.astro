@@ -27,6 +27,11 @@ const canonicalUrl = Astro.site
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`.replace(/\/+/g, '/')} />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}/apple-touch-icon.png`.replace(/\/+/g, '/')} />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}/manifest.webmanifest`.replace(/\/+/g, '/')} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Fade & Trim" />
 
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />

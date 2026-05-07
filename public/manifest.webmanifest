@@ -1,0 +1,33 @@
+{
+  "name": "Fade & Trim Barbers — Stone, Dartford",
+  "short_name": "Fade & Trim",
+  "description": "Traditional barbering on London Road, Stone. Modern fades, classic cuts, and hot-towel shaves. Walk-ins welcome — open 7 days.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf7f2",
+  "theme_color": "#141414",
+  "lang": "en-GB",
+  "categories": ["business", "lifestyle"],
+  "icons": [
+    {
+      "src": "/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

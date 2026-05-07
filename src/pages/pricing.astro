@@ -166,6 +166,58 @@ const pageDescription =
         </div>
       </section>
 
+      <!-- ========== WHY A WEBSITE ========== -->
+      <section class="section-pad bg-cream">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-end">
+            <div class="md:col-span-6">
+              <p class="eyebrow">{pricing.whyWebsite.eyebrow}</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+                {pricing.whyWebsite.heading}
+              </h2>
+            </div>
+            <div class="md:col-span-6">
+              <p class="text-lg text-muted leading-relaxed">
+                {pricing.whyWebsite.intro}
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-14 md:mt-20 overflow-hidden rounded-sm border border-ink/10">
+            <!-- Header row -->
+            <div class="grid md:grid-cols-12 bg-cream-dark text-xs uppercase tracking-[0.18em]">
+              <div class="md:col-span-4 px-5 md:px-7 py-4 text-muted">The gap</div>
+              <div class="md:col-span-4 px-5 md:px-7 py-4 text-muted border-t md:border-t-0 md:border-l border-ink/10">Instagram only</div>
+              <div class="md:col-span-4 px-5 md:px-7 py-4 text-brass border-t md:border-t-0 md:border-l border-ink/10">Your own website</div>
+            </div>
+            <!-- Rows -->
+            {pricing.whyWebsite.rows.map((row) => (
+              <div class="grid md:grid-cols-12 border-t border-ink/10 bg-cream">
+                <div class="md:col-span-4 px-5 md:px-7 py-5 md:py-6">
+                  <p class="font-display text-lg md:text-xl text-ink leading-snug">{row.gap}</p>
+                </div>
+                <div class="md:col-span-4 px-5 md:px-7 py-5 md:py-6 border-t md:border-t-0 md:border-l border-ink/10">
+                  <p class="text-sm text-muted leading-relaxed flex items-start gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mt-1 shrink-0 text-muted/50"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    <span>{row.instagram}</span>
+                  </p>
+                </div>
+                <div class="md:col-span-4 px-5 md:px-7 py-5 md:py-6 border-t md:border-t-0 md:border-l border-ink/10 bg-cream-dark/40">
+                  <p class="text-sm text-ink leading-relaxed flex items-start gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mt-1 shrink-0 text-brass"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>{row.website}</span>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p class="mt-10 max-w-3xl text-base md:text-lg text-muted leading-relaxed italic">
+            {pricing.whyWebsite.closer}
+          </p>
+        </div>
+      </section>
+
       <!-- ========== WHAT YOU GET ========== -->
       <section id="what-you-get" class="section-pad bg-cream-dark">
         <div class="container-page">
@@ -310,29 +362,61 @@ const pageDescription =
             </div>
           </div>
 
-          <!-- Included / Not included -->
-          <div class="mt-14 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-            <div>
-              <p class="text-xs uppercase tracking-[0.22em] text-brass mb-4">Included in every plan</p>
-              <ul class="space-y-2.5">
-                {pricing.included.map((item) => (
-                  <li class="flex items-start gap-3 text-ink">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brass mt-1 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span class="text-sm leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+          <!-- Itemised setup breakdown -->
+          <div class="mt-16 md:mt-24 max-w-5xl mx-auto">
+            <div class="text-center mb-10 md:mb-14">
+              <p class="eyebrow">What's in the £{pricing.plans.founder.setup} setup</p>
+              <h3 class="mt-4 font-display text-3xl md:text-4xl text-ink">
+                Every line, itemised.
+              </h3>
+              <p class="mt-3 text-muted text-base max-w-xl mx-auto">
+                One price covers all of this. No drip-feed of "actually that's extra" surprises.
+              </p>
             </div>
-            <div>
-              <p class="text-xs uppercase tracking-[0.22em] text-muted mb-4">Not included (yet)</p>
-              <ul class="space-y-2.5">
-                {pricing.notIncluded.map((item) => (
-                  <li class="flex items-start gap-3 text-muted">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mt-1 shrink-0 text-muted/60"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    <span class="text-sm leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+
+            <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+              {pricing.setupBreakdown.map((cat) => (
+                <div class="bg-cream rounded-sm p-7 md:p-8 border border-ink/10">
+                  <p class="text-xs uppercase tracking-[0.22em] text-brass">{cat.category}</p>
+                  <ul class="mt-5 space-y-4">
+                    {cat.items.map((item) => (
+                      <li class="flex items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brass mt-1 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                        <div>
+                          <p class="text-sm font-semibold text-ink">{item.name}</p>
+                          <p class="mt-0.5 text-sm text-muted leading-relaxed">{item.detail}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <!-- Monthly inclusions strip -->
+            <div class="mt-6 md:mt-7 bg-ink text-cream rounded-sm p-7 md:p-9 grain">
+              <div class="grid md:grid-cols-12 gap-6 md:gap-10 items-start">
+                <div class="md:col-span-4">
+                  <p class="text-xs uppercase tracking-[0.22em] text-brass-light">In £{pricing.plans.founder.monthly}/month</p>
+                  <h3 class="mt-3 font-display text-2xl md:text-3xl">Ongoing, no surprises.</h3>
+                </div>
+                <ul class="md:col-span-8 grid sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {pricing.monthlyBreakdown.map((item) => (
+                    <li class="flex items-start gap-2.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brass-light mt-1 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span class="text-sm text-cream/80 leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Not included -->
+            <div class="mt-12 max-w-3xl mx-auto text-center">
+              <p class="text-xs uppercase tracking-[0.22em] text-muted mb-3">Not included</p>
+              <p class="text-sm text-muted leading-relaxed">
+                {pricing.notIncluded.join(' · ')}
+              </p>
             </div>
           </div>
         </div>
@@ -432,6 +516,74 @@ const pageDescription =
         </div>
       </section>
 
+      <!-- ========== BYTECODE SHOWCASE ========== -->
+      <section class="section-pad bg-cream-dark">
+        <div class="container-page">
+          <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-end">
+            <div class="md:col-span-7">
+              <p class="eyebrow">{pricing.bytecode.eyebrow}</p>
+              <h2 class="mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-ink">
+                {pricing.bytecode.heading}
+              </h2>
+            </div>
+            <div class="md:col-span-5">
+              <p class="text-base md:text-lg text-muted leading-relaxed">
+                {pricing.bytecode.intro}
+              </p>
+            </div>
+          </div>
+
+          <!-- Portfolio cards -->
+          <div class="mt-14 md:mt-20 grid md:grid-cols-3 gap-5 md:gap-6">
+            {pricing.bytecode.portfolio.map((p) => (
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-cream rounded-sm p-7 md:p-8 border border-ink/10 hover:border-brass transition-colors flex flex-col"
+              >
+                <div class="h-14 flex items-center">
+                  <img
+                    src={asset(p.logo)}
+                    alt={`${p.name} logo`}
+                    class="max-h-12 max-w-[160px] w-auto h-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="mt-5 text-[0.65rem] uppercase tracking-[0.22em] text-brass">{p.tag}</p>
+                <h3 class="mt-2 font-display text-2xl text-ink">{p.name}</h3>
+                <p class="mt-3 text-sm text-muted leading-relaxed flex-1">{p.body}</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-brass group-hover:text-brass-dark transition-colors">
+                  Learn more
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <!-- Services strip + CTA -->
+          <div class="mt-12 md:mt-16 grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div class="md:col-span-7">
+              <p class="text-xs uppercase tracking-[0.22em] text-muted mb-4">We also do</p>
+              <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                {pricing.bytecode.services.map((s) => (
+                  <li class="flex items-start gap-2.5 text-ink">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-1.5 h-1.5 mt-2 shrink-0 text-brass"><circle cx="12" cy="12" r="10"/></svg>
+                    <span class="text-sm leading-relaxed">{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="md:col-span-5 md:text-right">
+              <a href={pricing.bytecode.cta.href} target="_blank" rel="noopener noreferrer" class="btn-outline text-ink hover:!bg-ink hover:!text-cream">
+                {pricing.bytecode.cta.label}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ========== APPLY / FORM ========== -->
       <section id="apply" class="section-pad bg-ink text-cream grain">
         <div class="container-page">
@@ -512,15 +664,43 @@ const pageDescription =
     </main>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="bg-cream-dark border-t border-ink/5">
-      <div class="container-page py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <p class="text-sm text-muted">
-          © {new Date().getFullYear()} {pricing.brand.name}. Built in Dartford.
-        </p>
-        <div class="flex items-center gap-5 text-sm text-muted">
-          <a href="https://barbers.bytecodeconsulting.com/" target="_blank" rel="noopener" class="hover:text-brass transition-colors">Live example</a>
-          <a href={`mailto:${pricing.brand.email}`} class="hover:text-brass transition-colors">{pricing.brand.email}</a>
+    <footer class="bg-ink text-cream">
+      <div class="container-page py-10 md:py-12 grid md:grid-cols-3 gap-8 items-start">
+        <div>
+          <p class="font-display text-xl font-semibold">
+            Bytecode<span class="text-brass">.</span>
+          </p>
+          <p class="mt-2 text-sm text-cream/60 max-w-xs leading-relaxed">
+            AI &amp; software studio. Based in Dartford.
+            <br />
+            <a href={`mailto:${pricing.brand.email}`} class="text-cream/80 hover:text-brass-light transition-colors">{pricing.brand.email}</a>
+          </p>
         </div>
+
+        <div>
+          <p class="text-xs uppercase tracking-[0.22em] text-brass mb-3">More</p>
+          <ul class="space-y-2 text-sm text-cream/80">
+            <li><a href="/" class="hover:text-brass-light transition-colors">Live example</a></li>
+            <li><a href={pricing.bytecode.cta.href} target="_blank" rel="noopener" class="hover:text-brass-light transition-colors">bytecodeconsulting.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-xs uppercase tracking-[0.22em] text-brass mb-3">Legal</p>
+          <ul class="space-y-2 text-sm text-cream/80">
+            <li><a href="/privacy" class="hover:text-brass-light transition-colors">Privacy policy</a></li>
+            <li><a href="/terms" class="hover:text-brass-light transition-colors">Terms &amp; conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-page pb-8 pt-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3 border-t border-cream/10">
+        <p class="text-xs text-cream/50">
+          © {new Date().getFullYear()} {pricing.brand.name}. All rights reserved.
+        </p>
+        <p class="text-xs text-cream/40">
+          Bytecode Consulting Ltd is registered in England &amp; Wales.
+        </p>
       </div>
     </footer>
   </body>
