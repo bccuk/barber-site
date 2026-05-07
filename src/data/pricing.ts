@@ -57,7 +57,7 @@ export const pricing = {
     },
     {
       title: 'Updates handled for you',
-      body: 'Need to change a price, swap a photo, add a service? Message us — live in under an hour.',
+      body: 'Need to change a price, swap a photo, add a service? Message us — typically live within a couple of hours.',
     },
     {
       title: 'A real human in Dartford',
@@ -146,7 +146,7 @@ export const pricing = {
 
   monthlyBreakdown: [
     'Hosting, SSL & domain renewals (everything stays online)',
-    'Content updates whenever you ask — usually within an hour',
+    'Content updates whenever you ask — typically within a couple of hours',
     'Real human support, in Dartford',
     'Backups, monitoring & framework upgrades',
     'No surprise bills, no contracts',
@@ -323,7 +323,7 @@ export const pricing = {
     },
     {
       q: 'Can I update the site myself?',
-      a: 'No — and that\'s deliberate. DIY editors create messy sites. Instead, you message us with what you want changed, and we update it within an hour during business hours. That\'s what the £19/month covers.',
+      a: 'No — and that\'s deliberate. DIY editors create messy sites. Instead, you message us with what you want changed, and we typically update it within a couple of hours during business hours. That\'s what the £19/month covers.',
     },
     {
       q: 'What if I want to add e-commerce later?',
