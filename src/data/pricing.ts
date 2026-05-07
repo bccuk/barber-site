@@ -5,7 +5,8 @@
 
 export const pricing = {
   brand: {
-    name: 'Bytecode Consulting',
+    name: 'Bytecode Consulting Limited',
+    shortName: 'Bytecode Consulting',
     tagline: 'AI & software studio · Dartford',
     domain: 'bytecodeconsulting.com',
     email: 'admin@bytecodeconsulting.com',
