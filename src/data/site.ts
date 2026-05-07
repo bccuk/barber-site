@@ -134,13 +134,19 @@ export const site = {
       author: 'Google review',
     },
   ],
+  hero: {
+    images: [
+      { src: 'images/0.webp', alt: 'Lead barber Kardo cutting a long-time customer at Fade & Trim Barbers' },
+      { src: 'images/1.webp', alt: 'Patient cut for a young customer at Fade & Trim Barbers' },
+      { src: 'images/2.webp', alt: 'Barbering tools laid out on the counter' },
+    ],
+  },
   gallery: [
-    { label: 'Skin Fade', tone: 'from-neutral-800 to-neutral-950' },
-    { label: 'Scissor Cut', tone: 'from-stone-800 to-stone-950' },
-    { label: 'Beard Shape', tone: 'from-zinc-800 to-zinc-950' },
-    { label: 'Hot Towel Shave', tone: 'from-neutral-700 to-neutral-900' },
-    { label: 'Classic Side Part', tone: 'from-stone-700 to-stone-900' },
-    { label: 'The Shop', tone: 'from-zinc-700 to-zinc-900' },
+    { src: 'images/3.webp', label: 'The Shop', alt: 'Inside Fade & Trim — chairs, mirrors and pendant lighting' },
+    { src: 'images/4.webp', label: 'Skin Fade', alt: 'Skin fade in progress at Fade & Trim Barbers' },
+    { src: 'images/5.webp', label: 'Sharp Finish', alt: 'Fresh skin fade with the classic barber pole reflected behind' },
+    { src: 'images/6.webp', label: 'Fresh Cut', alt: 'Customer with a fresh cut at Fade & Trim Barbers' },
+    { src: 'images/7.webp', label: 'Clean Lines', alt: 'Back view of a fresh skin fade with neat finish' },
   ],
   bookingNote: 'Call the shop or message us on Instagram to book.',
 } as const;
