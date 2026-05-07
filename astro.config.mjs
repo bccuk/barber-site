@@ -1,13 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// Site is served from a subpath on GitHub Pages: https://bccuk.github.io/barber-site/
-// `base` is prefixed to every asset URL Astro emits.
-// When you add a custom domain (Cloudflare Pages or similar), set `site` to that
-// domain and remove `base`.
+// Custom domain via the CNAME file in public/.
+// Site serves at the root, so no `base` needed. If you ever go back to
+// the bccuk.github.io/barber-site/ subpath, set base: '/barber-site'.
 export default defineConfig({
-  site: 'https://bccuk.github.io',
-  base: '/barber-site',
+  site: 'https://barbers.bytecodeconsulting.com',
   vite: {
     plugins: [tailwindcss()],
   },
