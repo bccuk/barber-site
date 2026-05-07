@@ -327,7 +327,7 @@ export const pricing = {
     },
     {
       q: 'What if I want to add e-commerce later?',
-      a: "We don't currently build full e-commerce stores — that's a different product. If you eventually need a shop, we'll happily migrate you to Shopify or similar and your domain comes with you.",
+      a: "Yes — when you're ready to sell online, we'll help you onboard onto Shopify (or whichever e-commerce platform fits best for your business). We bring your brand, content and domain across with you, so you keep all the trust and search ranking you've already built up.",
     },
   ],
 
