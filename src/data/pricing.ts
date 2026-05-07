@@ -335,7 +335,7 @@ export const pricing = {
     title: 'Tell us about your business',
     sub: "We'll reply within one working day with next steps. No salesy follow-up.",
     // Replace with your Formspree endpoint after registering at https://formspree.io/
-    actionUrl: 'https://formspree.io/f/REPLACE_WITH_YOUR_ENDPOINT',
+    actionUrl: 'https://formspree.io/f/xbdwkvqj',
     fallbackEmail: 'admin@bytecodeconsulting.com',
     businessTypes: [
       'Barber',
