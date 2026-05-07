@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import LogoMark from './LogoMark.astro';
 
 const year = new Date().getFullYear();
 ---
@@ -8,10 +9,15 @@ const year = new Date().getFullYear();
   <div class="container-page py-14 md:py-20">
     <div class="grid gap-10 md:grid-cols-3">
       <div>
-        <p class="font-display text-2xl font-semibold">
-          Fade<span class="text-brass">&amp;</span>Trim
+        <p class="flex items-center gap-2 font-display text-2xl font-semibold">
+          Fade
+          <LogoMark class="w-7 h-7 text-brass-light shrink-0 -mb-1" />
+          Trim
         </p>
-        <p class="mt-2 text-sm text-cream/60">
+        <p class="mt-1 text-[0.65rem] uppercase tracking-[0.22em] text-cream/60">
+          Barber · Dartford
+        </p>
+        <p class="mt-3 text-sm text-cream/60">
           Dartford's traditional barbershop. Est. {site.established}.
         </p>
       </div>
