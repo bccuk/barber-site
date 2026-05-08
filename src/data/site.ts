@@ -22,8 +22,10 @@ export const site = {
     source: 'Google',
   },
   contact: {
-    phone: '020 0000 0000',
-    phoneHref: 'tel:+442000000000',
+    phone: '07700 900000',
+    phoneHref: 'tel:+447700900000',
+    whatsapp: '+44 7700 900000',
+    whatsappHref: 'https://wa.me/447700900000',
     email: 'hello@thecutco.co.uk',
     address: {
       line1: '12 High Street',
@@ -37,6 +39,38 @@ export const site = {
     googleMapsEmbed:
       'https://www.google.com/maps?q=High+Street+London+EC1A&output=embed',
     googleMapsLink: 'https://maps.google.com/?q=The+Cut+Co+London',
+  },
+
+  // Status banner — small chip just below nav. Owner updates this manually
+  // by messaging Bytecode Studio. Set enabled: false to hide the banner.
+  status: {
+    enabled: true,
+    emoji: '🟢',
+    text: 'Walk-ins welcome today · Saturdays book up early',
+  },
+
+  // Universal request form. Same component, different fields/labels per
+  // trade, controlled by `type` and `fields`. Form submissions go to the
+  // Formspree endpoint, which forwards them to the shop's email.
+  request: {
+    eyebrow: 'Book your chair',
+    heading: 'Send a request, get a reply.',
+    intro:
+      "Tell us when you'd like to come in and what you're after — we'll confirm by message or call within a few hours.",
+    ctaLabel: 'Book a haircut',
+    submitLabel: 'Send booking request',
+    type: 'in-shop' as const, // 'in-shop' | 'callout' | 'mixed'
+    fields: {
+      service: true,
+      preferredTime: true,
+      urgency: false,
+      address: false,
+      notes: true,
+    },
+    // Replace with a Cut Co.-specific Formspree endpoint if you want
+    // segregated submissions (otherwise leave as-is and rely on _subject).
+    formspreeEndpoint: 'https://formspree.io/f/xbdwkvqj',
+    submitSubject: 'New booking request — The Cut Co.',
   },
   hours: [
     { day: 'Monday', hours: '09:00 – 19:00' },
