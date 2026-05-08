@@ -2,26 +2,20 @@
 import { site } from '../data/site';
 
 const year = new Date().getFullYear();
-
-const base = import.meta.env.BASE_URL;
-const asset = (p: string) => `${base}/${p}`.replace(/\/+/g, '/');
 ---
 
 <footer class="bg-ink text-cream">
   <div class="container-page py-14 md:py-20">
     <div class="grid gap-10 md:grid-cols-3">
       <div>
-        <img
-          src={asset('images/logo.webp')}
-          alt={`${site.name} — official logo`}
-          width="240"
-          height="99"
-          loading="lazy"
-          decoding="async"
-          class="w-48 md:w-56 h-auto"
-        />
-        <p class="mt-4 text-sm text-cream/60">
-          Dartford's traditional barbershop. Est. {site.established}.
+        <p class="font-display text-3xl md:text-4xl font-semibold leading-none">
+          The <span class="text-brass">Cut</span> Co.
+        </p>
+        <p class="mt-3 text-[0.65rem] uppercase tracking-[0.22em] text-cream/60">
+          Barber · {site.location}
+        </p>
+        <p class="mt-5 text-sm text-cream/60">
+          {site.location}'s traditional barbershop. Est. {site.established}.
         </p>
       </div>
 

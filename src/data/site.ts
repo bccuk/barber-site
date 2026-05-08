@@ -1,40 +1,42 @@
+// Sample barbershop data — generic content used as a marketing demo for
+// Bytecode Studio prospects. Every value here is fictional. The Fade & Trim
+// build is preserved on the `fade-and-trim` branch in case that customer
+// returns.
+
 export const site = {
-  name: 'Fade & Trim Barbers',
-  shortName: 'Fade & Trim',
+  name: 'The Cut Co.',
+  shortName: 'The Cut Co.',
   tagline: 'Sharp Cuts. Classic Service.',
-  location: 'Stone, Dartford',
-  // Year shop opened — verify with owner; placeholder until confirmed.
-  established: 2018,
+  location: 'London',
+  established: 2019,
   description:
-    "Stone, Dartford's neighbourhood barbershop — modern fades, classic cuts, beard work and hot-towel shaves. Walk-ins welcome, open seven days.",
+    "A traditional barbershop in the heart of the city — modern fades, classic cuts, beard work and hot-towel shaves. Walk-ins welcome, open seven days.",
   seo: {
-    title: 'Fade & Trim Barbers — Stone, Dartford | Modern Fades & Classic Cuts',
+    title: 'The Cut Co. — London | Modern Fades & Classic Cuts',
     description:
-      "Traditional barbering on London Road, Stone. Skin fades, scissor cuts, beard trims, and hot-towel shaves. 4.7 stars from 47 reviews. Walk-ins welcome — open 7 days.",
+      "Traditional barbering on London's High Street. Skin fades, scissor cuts, beard trims, and hot-towel shaves. Walk-ins welcome — open 7 days.",
   },
   rating: {
-    score: 4.7,
-    count: 47,
+    score: 4.8,
+    count: 53,
     source: 'Google',
   },
   contact: {
-    phone: '07990 232186',
-    phoneHref: 'tel:+447990232186',
-    email: 'hello@fadeandtrimbarbers.co.uk',
+    phone: '020 0000 0000',
+    phoneHref: 'tel:+442000000000',
+    email: 'hello@thecutco.co.uk',
     address: {
-      line1: '60 London Road',
-      city: 'Stone, Dartford',
-      postcode: 'DA2 6AN',
+      line1: '12 High Street',
+      city: 'London',
+      postcode: 'EC1A 1BB',
       country: 'United Kingdom',
     },
-    instagram: '@fadeandtrimbarber',
-    instagramUrl: 'https://www.instagram.com/fadeandtrimbarber',
-    facebookUrl:
-      'https://www.facebook.com/people/FadeTrim-Barbers/100085845297297/',
+    instagram: '@thecutco_london',
+    instagramUrl: 'https://instagram.com/thecutco_london',
+    facebookUrl: 'https://facebook.com/thecutco',
     googleMapsEmbed:
-      'https://www.google.com/maps?q=60+London+Road+Stone+Dartford+DA2+6AN&output=embed',
-    googleMapsLink:
-      'https://maps.google.com/?q=Fade+%26+Trim+Barbers+60+London+Road+Stone+Dartford+DA2+6AN',
+      'https://www.google.com/maps?q=High+Street+London+EC1A&output=embed',
+    googleMapsLink: 'https://maps.google.com/?q=The+Cut+Co+London',
   },
   hours: [
     { day: 'Monday', hours: '09:00 – 19:00' },
@@ -98,9 +100,9 @@ export const site = {
   ],
   about: {
     eyebrow: 'About the shop',
-    heading: "A proper barbershop on London Road.",
+    heading: "A proper barbershop. No frills, no fuss.",
     body: [
-      "Fade & Trim is Stone's neighbourhood barbershop — a small team led by Kardo, doing one thing properly: cutting hair the way you want it cut.",
+      "The Cut Co. has been cutting hair on the High Street since 2019 — a small team doing one thing properly: cutting hair the way you want it cut.",
       "Whether it's a sharp skin fade, a classic side-part, a beard tidy or a full hot-towel shave, you'll get a real consultation, a fresh towel, and a finish you can be proud of. No rush, no upsells — just a good cut at a fair price, seven days a week.",
     ],
     bullets: [
@@ -112,41 +114,41 @@ export const site = {
   testimonials: [
     {
       quote:
-        'From the moment I walked in, the team was welcoming, professional, and attentive to detail.',
-      author: 'Google review',
+        'From the moment I walked in, the team was welcoming, professional, and attentive to detail. Best fade I have had in years.',
+      author: 'Tom B.',
     },
     {
       quote:
-        "The quality of the haircut exceeded my expectations — it's clear the staff take great pride in their work.",
-      author: 'Google review',
+        "The quality of the haircut exceeded my expectations — you can tell the staff take real pride in their work.",
+      author: 'James L.',
     },
     {
       quote:
-        'Not only is the service excellent, but the pricing is also very reasonable for the level of care and expertise.',
-      author: 'Google review',
+        'Reasonable prices for the level of care and expertise. The chair feels like a proper old-school barbershop, run by people who know what they are doing.',
+      author: 'Daniel R.',
     },
     {
-      quote: 'Kardo was an excellent barber. Highly recommend this place.',
-      author: 'Google review',
+      quote: 'Sharp finish every visit. No rush, no nonsense — just a great cut.',
+      author: 'Marcus W.',
     },
     {
-      quote: 'Best friendly place and professional barbers.',
-      author: 'Google review',
+      quote: 'Friendly, professional, and the cut is always spot on. Highly recommend.',
+      author: 'Sam P.',
     },
   ],
   hero: {
     images: [
-      { src: 'images/0.webp', alt: 'Lead barber Kardo cutting a long-time customer at Fade & Trim Barbers' },
-      { src: 'images/1.webp', alt: 'Patient cut for a young customer at Fade & Trim Barbers' },
-      { src: 'images/2.webp', alt: 'Barbering tools laid out on the counter' },
+      { src: 'images/0.webp', alt: 'A customer getting a careful scissor cut at The Cut Co.' },
+      { src: 'images/1.webp', alt: 'A customer in the chair at The Cut Co.' },
+      { src: 'images/2.webp', alt: 'Beard work in progress — black and white' },
     ],
   },
   gallery: [
-    { src: 'images/3.webp', label: 'The Shop', alt: 'Inside Fade & Trim — chairs, mirrors and pendant lighting' },
-    { src: 'images/4.webp', label: 'Skin Fade', alt: 'Skin fade in progress at Fade & Trim Barbers' },
-    { src: 'images/5.webp', label: 'Sharp Finish', alt: 'Fresh skin fade with the classic barber pole reflected behind' },
-    { src: 'images/6.webp', label: 'Fresh Cut', alt: 'Customer with a fresh cut at Fade & Trim Barbers' },
-    { src: 'images/7.webp', label: 'Clean Lines', alt: 'Back view of a fresh skin fade with neat finish' },
+    { src: 'images/3.webp', label: 'The Shop', alt: 'Inside The Cut Co. — chairs, mirrors and pendant lighting' },
+    { src: 'images/4.webp', label: 'Skin Fade', alt: 'Skin fade in progress at The Cut Co.' },
+    { src: 'images/5.webp', label: 'Sharp Finish', alt: 'A barber finishing a sharp cut at The Cut Co.' },
+    { src: 'images/6.webp', label: 'Fresh Cut', alt: 'Customer with a fresh cut at The Cut Co.' },
+    { src: 'images/7.webp', label: 'Clean Lines', alt: 'Clipper work for clean line-ups' },
   ],
   bookingNote: 'Call the shop or message us on Instagram to book.',
 } as const;

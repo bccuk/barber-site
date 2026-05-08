@@ -1,7 +1,7 @@
 {
-  "name": "Fade & Trim Barbers — Stone, Dartford",
-  "short_name": "Fade & Trim",
-  "description": "Traditional barbering on London Road, Stone. Modern fades, classic cuts, and hot-towel shaves. Walk-ins welcome — open 7 days.",
+  "name": "The Cut Co. — London",
+  "short_name": "The Cut Co.",
+  "description": "Sample barbershop website by Bytecode Studio. Modern fades, classic cuts, and hot-towel shaves on the High Street. Walk-ins welcome — open 7 days.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
